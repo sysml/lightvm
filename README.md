@@ -7,8 +7,8 @@ Currently, LightVM relies on Linux kernel for dom0, while for unprivileged domai
 
 ## Xen
 * Repo: [https://github.com/cnplab/xen](https://github.com/cnplab/xen)
-* Branch: ``fmanco/noxs-4.8.1`` based on Xen 4.8.1
-* Branch: ``noxs`` based on Xen 4.8.0, contains tracing support for measuring device initialization timings
+* Branch: ``noxs-4.8.1`` based on Xen 4.8.1
+* Branch: ``noxs-4.8.0`` based on Xen 4.8.0
 
 ## Linux
 * Repo: [https://github.com/cnplab/linux](https://github.com/cnplab/linux)
