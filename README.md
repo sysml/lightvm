@@ -62,9 +62,9 @@ Xen. Be sure to provide a custom installation path before building if
 a different location is desired.
 
 ```bash
-./configure --prefix=<my Xen distribution directory>
-make dist-xen
-make dist-tools
+  $ ./configure --prefix=<my Xen distribution directory>
+  $ make dist-xen
+  $ make dist-tools
 ```
 
 ## Linux
@@ -72,9 +72,10 @@ make dist-tools
 * Branch: ``noxs``
 * Build: Add ``CONFIG_XEN_NOXS=y`` in the config file in addition to using
 the [Xen config flags](https://wiki.xenproject.org/wiki/Mainline_Linux_Kernel_Configs#Configuring_the_Kernel) for building Linux domains.
-* Prepare the userspace headers which will be used by the Chaos toolstack:
+
+Prepare the userspace headers which will be used by the Chaos toolstack:
 ```bash
-make headers_install INSTALL_HDR_PATH=<my Linux headers>
+  $ make headers_install INSTALL_HDR_PATH=<my Linux headers>
 ```
 
 ## XenDevD
@@ -83,6 +84,7 @@ make headers_install INSTALL_HDR_PATH=<my Linux headers>
 * Build: Before running ``make`` command, update the Makefile to refer to
 the headers and libraries installed in the previously configured Xen
 distribution directory:
+
 ```diff
 -CFLAGS   += -Iinc -Wall -g -O3
 -LDFLAGS  += -lxenstore
@@ -97,15 +99,17 @@ distribution directory:
 to refer to the previously configured environment paths. For build,
 simply run the ``make`` command. NoXS can be enabled by using the
 ``CONFIG_H2_XEN_NOXS`` flag:
+
 ```bash
-make CONFIG_H2_XEN_NOXS=y
+  $ make CONFIG_H2_XEN_NOXS=y
 ```
 
 ## Mini-OS
 * Repo: [https://github.com/sysml/mini-os](https://github.com/sysml/mini-os)
 * Branch: ``noxs``
 * Build: Enable NoXS by setting ``CONFIG_NOXS`` flag:
+
 ```bash
-make CONFIG_NOXS=y
+  $ make CONFIG_NOXS=y
 ```
 
