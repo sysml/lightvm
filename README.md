@@ -53,6 +53,11 @@ instantiation. Similarly to ``xl`` using ``libxl`` library for most of its
 functionality, the common functionality of Chaos tools is provided by
 the ``libh2`` library.
 
+Besides Linux domU domains, LightVM also supports Mini-OS based 
+applications. The Mini-apps repository provides a set of applications 
+examples that can be used to demonstrate the functionality and 
+performance of ``noxs`` based environments.
+
 ## Xen
 * Repo: [https://github.com/sysml/xen](https://github.com/sysml/xen)
 * Branch: ``noxs-4.8.1`` based on Xen 4.8.1
@@ -74,6 +79,7 @@ a different location is desired.
 the [Xen config flags](https://wiki.xenproject.org/wiki/Mainline_Linux_Kernel_Configs#Configuring_the_Kernel) for building Linux domains.
 
 Prepare the userspace headers which will be used by the Chaos toolstack:
+
 ```bash
   $ make headers_install INSTALL_HDR_PATH=<my Linux headers>
 ```
@@ -112,4 +118,20 @@ simply run the ``make`` command. NoXS can be enabled by using the
 ```bash
   $ make CONFIG_NOXS=y
 ```
+
+## Mini-Apps
+* Repo: [https://github.com/sysml/mini-apps](https://github.com/sysml/mini-apps)
+* Branch: ``noxs``
+* Build requirements: the Mini-OS applications need the Newlib and Lwip libraries 
+  provided by the Mini-OS [toolchain][Mini-OS toolchain].
+* Build: In the target application directory:
+
+```bash
+  $ cd daytime
+  $ make XEN_ROOT=... MINIOS_ROOT=... NEWLIB_ROOT=... LWIP_ROOT=... <Mini-OS specific flags>
+```
+
+## Mini-OS toolchain
+* Repo: [https://github.com/sysml/toolchain]
+* For build details, follow the indications in the toolchain README
 
