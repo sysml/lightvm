@@ -59,7 +59,7 @@ examples that can be used to demonstrate the functionality and
 performance of ``noxs`` based environments.
 
 ## Xen
-* Repo: [https://github.com/sysml/xen](https://github.com/sysml/xen)
+* Repo: https://github.com/sysml/xen
 * Branch: ``noxs-4.8.1`` based on Xen 4.8.1
 * Branch: ``noxs-4.8.0`` based on Xen 4.8.0
 * Build and installation steps are the same ones used for upstream
@@ -73,7 +73,7 @@ a different location is desired.
 ```
 
 ## Linux
-* Repo: [https://github.com/sysml/linux](https://github.com/sysml/linux)
+* Repo: https://github.com/sysml/linux
 * Branch: ``noxs``
 * Build: Add ``CONFIG_XEN_NOXS=y`` in the config file in addition to using
 the [Xen config flags](https://wiki.xenproject.org/wiki/Mainline_Linux_Kernel_Configs#Configuring_the_Kernel) for building Linux domains.
@@ -85,7 +85,7 @@ Prepare the userspace headers which will be used by the Chaos toolstack:
 ```
 
 ## XenDevD
-* Repo: [https://github.com/sysml/xendevd](https://github.com/sysml/xendevd)
+* Repo: https://github.com/sysml/xendevd
 * Branch: ``noxs``
 * Build: Before running ``make`` command, update the Makefile to refer to
 the headers and libraries installed in the previously configured Xen
@@ -99,7 +99,7 @@ distribution directory:
 ```
 
 ## Chaos
-* Repo: [https://github.com/sysml/chaos](https://github.com/sysml/chaos)
+* Repo: https://github.com/sysml/chaos
 * Branch: ``master``
 * Build: Before building, configure the variables in the ``config.in`` file
 to refer to the previously configured environment paths. For build,
@@ -111,7 +111,7 @@ simply run the ``make`` command. NoXS can be enabled by using the
 ```
 
 ## Mini-OS
-* Repo: [https://github.com/sysml/mini-os](https://github.com/sysml/mini-os)
+* Repo: https://github.com/sysml/mini-os
 * Branch: ``noxs``
 * Build: Enable NoXS by setting ``CONFIG_NOXS`` flag:
 
@@ -120,10 +120,10 @@ simply run the ``make`` command. NoXS can be enabled by using the
 ```
 
 ## Mini-Apps
-* Repo: [https://github.com/sysml/mini-apps](https://github.com/sysml/mini-apps)
+* Repo: https://github.com/sysml/mini-apps
 * Branch: ``noxs``
 * Build requirements: the Mini-OS applications need the Newlib and Lwip libraries 
-  provided by the Mini-OS [toolchain][Mini-OS toolchain].
+  provided by the Mini-OS [toolchain][#mini-os-toolchain].
 * Build: In the target application directory:
 
 ```bash
@@ -132,6 +132,6 @@ simply run the ``make`` command. NoXS can be enabled by using the
 ```
 
 ## Mini-OS toolchain
-* Repo: [https://github.com/sysml/toolchain]
+* Repo: https://github.com/sysml/toolchain
 * For build details, follow the indications in the toolchain README
 
