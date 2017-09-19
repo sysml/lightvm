@@ -14,7 +14,7 @@ The XenDevD repository provides the source code for the XenDevD daemon and the l
 The Chaos repository contains the source code for toolstack: the tool used in domain creation, shutdown and inspection, the daemon used for receiving migrating domains and the daemon used in split instantiation. Similarly to ``xl`` using ``libxl`` library for most of its functionality, the common functionality of Chaos tools is provided by the ``libh2`` library.
 
 ## Xen
-* Repo: [https://github.com/cnplab/xen](https://github.com/cnplab/xen)
+* Repo: [https://github.com/sysml/xen](https://github.com/sysml/xen)
 * Branch: ``noxs-4.8.1`` based on Xen 4.8.1
 * Branch: ``noxs-4.8.0`` based on Xen 4.8.0
 * Build and installation steps are the same ones used for upstream Xen. Be sure to provide a custom installation path before building if a different location is desired.
@@ -25,7 +25,7 @@ make dist-tools
 ```
 
 ## Linux
-* Repo: [https://github.com/cnplab/linux](https://github.com/cnplab/linux)
+* Repo: [https://github.com/sysml/linux](https://github.com/sysml/linux)
 * Branch: ``noxs``
 * Build: Add ``CONFIG_XEN_NOXS=y`` in the config file in addition to using the [Xen config flags](https://wiki.xenproject.org/wiki/Mainline_Linux_Kernel_Configs#Configuring_the_Kernel) for building Linux domains.
 * Prepare the userspace headers which will be used by the Chaos toolstack:
@@ -34,7 +34,7 @@ make headers_install INSTALL_HDR_PATH=<my Linux headers>
 ```
 
 ## XenDevD
-* Repo: [https://github.com/cnplab/xendevd](https://github.com/cnplab/xendevd)
+* Repo: [https://github.com/sysml/xendevd](https://github.com/sysml/xendevd)
 * Branch: ``noxs``
 * Build: Before running ``make`` command, update the Makefile to refer to the headers and libraries installed in the previously configured Xen distribution directory:
 ```diff
@@ -45,7 +45,7 @@ make headers_install INSTALL_HDR_PATH=<my Linux headers>
 ```
 
 ## Chaos
-* Repo: [https://github.com/cnplab/chaos](https://github.com/cnplab/chaos)
+* Repo: [https://github.com/sysml/chaos](https://github.com/sysml/chaos)
 * Branch: ``master``
 * Build: Before building, configure the variables in the ``config.in`` file to refer to the previously configured environment paths. For build, simply run the ``make`` command. NoXS can be enabled by using the ``CONFIG_H2_XEN_NOXS`` flag:
 ```bash
@@ -53,7 +53,7 @@ make CONFIG_H2_XEN_NOXS=y
 ```
 
 ## Mini-OS
-* Repo: [https://github.com/cnplab/mini-os](https://github.com/cnplab/mini-os)
+* Repo: [https://github.com/sysml/mini-os](https://github.com/sysml/mini-os)
 * Branch: ``noxs``
 * Build: Enable NoXS by setting ``CONFIG_NOXS`` flag:
 ```bash
