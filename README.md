@@ -123,7 +123,7 @@ simply run the ``make`` command. NoXS can be enabled by using the
 * Repo: https://github.com/sysml/mini-apps
 * Branch: ``noxs``
 * Build requirements: the Mini-OS applications need the Newlib and Lwip libraries 
-  provided by the Mini-OS [toolchain][#mini-os-toolchain].
+  provided by the Mini-OS [toolchain](#mini-os-toolchain).
 * Build: In the target application directory:
 
 ```bash
