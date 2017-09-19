@@ -2,7 +2,7 @@
 LightVM is a virtualization solution based on Xen that is optimized to
 offer fast boot-times regardless of the number of active VMs. This is
 achieved by replacing Xenstore with a new distributed solution called
-``noxs`` (no Xenstore) which provides a shared page for each device
+NoXS (no Xenstore) which provides a shared page for each device
 containing all the information needed for device initialization.
 
 LightVM uses the new Chaos toolstack which currently implements
@@ -29,7 +29,7 @@ The Linux repository provides the changes needed for building both
 dom0 and domU domains. Inside dom0, Chaos will make use of the
 ``/dev/xen/noxs_backend`` device when requesting to the backend drivers
 the creation of devices configured for the target guest domains. With
-``noxs``, besides the backend drivers for network and block devices, the
+NoXS, besides the backend drivers for network and block devices, the
 ``sysctl`` backend driver is in charge with providing all the system-wise
 information and events (such as shutdown events) needed by the guest
 domains. On the guest side, the ``sysctl`` front driver will receive the
@@ -56,7 +56,7 @@ the ``libh2`` library.
 Besides Linux domU domains, LightVM also supports Mini-OS based 
 applications. The Mini-apps repository provides a set of applications 
 examples that can be used to demonstrate the functionality and 
-performance of ``noxs`` based environments.
+performance of NoXS based environments.
 
 ## Xen
 * Repo: https://github.com/sysml/xen
