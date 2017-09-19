@@ -54,3 +54,9 @@ make CONFIG_H2_XEN_NOXS=y
 
 ## Mini-OS
 * Repo: [https://github.com/cnplab/mini-os](https://github.com/cnplab/mini-os)
+* Branch: ``noxs``
+* Build: Enable NoXS by setting ``CONFIG_NOXS`` flag:
+```bash
+make CONFIG_NOXS=y
+```
+
