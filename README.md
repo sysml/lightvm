@@ -133,5 +133,6 @@ simply run the ``make`` command. NoXS can be enabled by using the
 
 ## Mini-OS toolchain
 * Repo: https://github.com/sysml/toolchain
+* Branch: ``noxs``
 * For build details, follow the indications in the toolchain README
 
